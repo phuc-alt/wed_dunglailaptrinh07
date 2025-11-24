@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop giày giá rẻ</title>
+    <link rel="stylesheet" href="trangchinh.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <h1>SV CLOSET</h1>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="ao.html">Giày NIKE </a></li>
+                <li><a href="quan.html">Adidas</a></li>
+                <li><a href="vay.html">Puma</a></li>
+                <li><a href="phukien.html">Phụ kiện</a></li>
+                <li><a href="muahang.html">Thanh Toán</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <h2>SV CLOSET</h2>
+        <p>Giày  - Giá siêu rẻ cho sinh viên</p>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" 
+        placeholder="Tìm kiếm sản phẩm... ">
+    </div>
+
+    <div class="products">
+
+        <!-- Áo -->
+        <div class="card" data-category="ao">
+            <img src="gaiynike.jpeg" alt="Áo khoác">
+            <div class="info">
+               
+                <p class="price">259.000đ <span class="old-price">450.000đ</span></p>
+            </div>
+        </div>
+
+        <div class="card" data-category="ao">
+            <img src="lukihhh.jpg" alt="Áo thun">
+            <div class="info">
+                
+                <p class="price">99.000đ <span class="old-price">150.000đ</span></p>
+            </div>
+        </div>
+
+        <!-- Quần -->
+        <div class="card" data-category="quan">
+            <img src="hhh.jpg" alt="Quần jeans">
+            <div class="info">
+                
+                <p class="price">299.000đ <span class="old-price">499.000đ</span></p>
+            </div>
+        </div>
+
+        <!-- Váy -->
+        <div class="card" data-category="vay">
+            <img src="giaynike.jpg" alt="Váy">
+            <div class="info">
+                
+                <p class="price">189.000đ <span class="old-price">350.000đ</span></p>
+            </div>
+        </div>
+
+        <!-- Phụ kiện -->
+        <div class="card" data-category="phukien">
+            <img src="bbb.jpg" alt="Túi tote">
+            <div class="info">
+               
+                <p class="price">69.000đ</p>
+            </div>
+        </div>
+
+        <!-- Thêm sản phẩm mới cứ copy-paste nguyên card này -->
+
+    </div>
+
+    <footer>
+        <p> SV Closet – Shop quần áo sinh viên giá rẻ</p>
+    </footer>
+
+    <!-- Tìm kiếm đơn giản (vẫn giữ để tiện dùng) -->
+    <script>
+        const input = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card');
+
+        input.addEventListener('input', () => {
+            const term = input.value.toLowerCase();
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                card.style.display = title.includes(term) ? 'block' : 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
